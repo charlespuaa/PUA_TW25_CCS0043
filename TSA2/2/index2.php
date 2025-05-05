@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pua | TSA1 PART 2</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <?php
     $name = "Charles Michael Pua";
     $grade = "";
     $rank = "";
-
     if (isset($_POST['grade'])) {
         $grade = $_POST['grade'];
-    
-        // Basic grade ranking using if-else
         if ($grade >= 93 && $grade <= 100) {
             $rank = "A";
         } elseif ($grade >= 90) {
@@ -38,8 +34,6 @@
         }
     }
     ?>
-
-
     <div class="info">
         <img src="pua.jpeg" alt="student pic">
         <h2> <?= $name ?> </h2>
@@ -56,7 +50,6 @@
             Rank: <strong><?= $rank ?></strong>
         </div>
     <?php endif; ?>
-
     </div>
 </body>
 </html>

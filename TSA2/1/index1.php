@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pua | F2</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
@@ -22,7 +22,6 @@
         for ($i = 0; $i < 15; $i++) {
             $numbers[] = rand(1, 100); // generates
         }
-
         // finds highest number 
         $max = max($numbers);
         // finds lowest number
@@ -34,7 +33,6 @@
         ?>
 
         <!-- display output -->
-
         <p class="numbers"> <?= implode(", ", $numbers) ?> </p>
         <br>
         <p>Highest: <?= $max ?> </p>
@@ -47,10 +45,8 @@
                 <button type="submit"> Generate New Numbers </button>
             </form>
         </div>
-
     </div>
 </body>
-
 </html>
 
 
