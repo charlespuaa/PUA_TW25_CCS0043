@@ -10,15 +10,15 @@
     <h1>Multiplication Table</h1>
     <table class="multiplication-table">
         <?php
-        // Loop through rows
+        // loop rows
         for($row = 0; $row <= 10; $row++){
             $rowContent = "<tr>"; 
-            // Loop through columns
+            // loop columns
             for($col = 0; $col <= 10; $col++){
                 $product = $row * $col;
-                // Determine class for alternating background colors
+                //alternating background colors
                 $cellClass = (($row + $col) % 2 == 0) ? 'even-cell' : 'odd-cell';
-                // Append cell 
+                // append cell 
                 $rowContent .= "<td class='$cellClass'>$product</td>";
             }
             $rowContent .= "</tr>"; 
