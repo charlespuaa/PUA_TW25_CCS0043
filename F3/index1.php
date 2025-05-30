@@ -3,120 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact List</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PUA | contact directory</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
-    <h1>Contact List</h1>
+    <h1>Contact Directory</h1>
 
     <?php
-    // Define array contacts to hold the data of 10 people 
-    // Keys: name,image,age,birthday and contactNumber
-    $contacts = [
-        // Male
+    // define the contact list
+    $contactList = [
         [
-            'name' => 'Park Bo-gum',
-            'image' => 'assets/ParkBogum.webp', 
-            'age' => 31, 
-            'birthday' => '1993-06-16',
-            'contactNumber' => '09112233445' 
+            'fullName' => 'Jisoo Kim',
+            'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxKuFipuiz18ApYwQFDnZNliGvvS0jEXqnw&s',
+            'years' => 29,
+            'dob' => '1995-01-03',
+            'phone' => '09010010001'
         ],
         [
-            'name' => 'Chris Hemsworth',
-            'image' => 'assets/ChrisHemsworth.webp',
-            'age' => 41, 
-            'birthday' => '1983-08-11',
-            'contactNumber' => '09123456789'
+            'fullName' => 'Jennie Kim',
+            'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwOJa3YFS16OmWI_JJB4isV2nHgvKcSlOEQ&s',
+            'years' => 28,
+            'dob' => '1996-01-16',
+            'phone' => '09020020002'
         ],
         [
-            'name' => 'Yuki Tsunoda',
-            'image' => 'assets/YukiTsunoda.jpg',
-            'age' => 25, 
-            'birthday' => '2000-05-11',
-            'contactNumber' => '09134567890' 
+            'fullName' => 'Rosé (Park Chaeyoung)',
+            'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_QSpM2qfk7uQrexJMJZHJTIUUgPqu3cAlJg&s',
+            'years' => 27,
+            'dob' => '1997-02-11',
+            'phone' => '09030030003'
         ],
         [
-            'name' => 'Faker (Lee Sang-hyeok)',
-            'image' => 'assets/Faker.webp',
-            'age' => 29, 
-            'birthday' => '1996-05-07',
-            'contactNumber' => '09145678901' 
+            'fullName' => 'Lisa Manoban',
+            'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAB6f5nlw3vU78fJOFbbDwO868AUojnAkyHFVoHgQLor2p649CRYfCEtUrnLdFO1bW0M&usqp=CAU',
+            'years' => 27,
+            'dob' => '1997-03-27',
+            'phone' => '09040040004'
         ],
         [
-            'name' => 'Tom Cruise', 
-            'image' => 'assets/TomCruise.jpg', 
-            'age' => 62, 
-            'birthday' => '1962-07-03',
-            'contactNumber' => '09156789012'
-        ],
-        // Female
-        [
-            'name' => 'Jennie Kim',
-            'image' => 'assets/JennieKim.jpg',
-            'age' => 29, 
-            'birthday' => '1996-01-16',
-            'contactNumber' => '09167890123'
-        ],
-        [
-            'name' => 'Emma Watson', 
-            'image' => 'assets/EmmaWatson.webp',
-            'age' => 35, 
-            'birthday' => '1990-04-15',
-            'contactNumber' => '09178901234'
-        ],
-        [
-            'name' => 'Jennifer Lawrence',
-            'image' => 'assets/JenniferLawrence.jpg',
-            'age' => 34, 
-            'birthday' => '1990-08-15',
-            'contactNumber' => '09189012345'
-        ],
-        [
-            'name' => 'IU (Lee Ji-eun)',
-            'image' => 'assets/IU.jpg',
-            'age' => 32,
-            'birthday' => '1993-05-16',
-            'contactNumber' => '09190123456'
-        ],
-        [
-            'name' => 'Scarlett Johansson',
-            'image' => 'assets/ScarlettJohansson.jpg',
-            'age' => 40, 
-            'birthday' => '1984-11-22',
-            'contactNumber' => '09201234567'
+            'fullName' => 'Benedict Collo',
+            'photo' => 'https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/429654869_2368100990067510_3564425483103780909_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NV7GAWf5R9AQ7kNvwFsShjf&_nc_oc=AdmHHWc_5DvHkIn6rhDF7w5kB2_MojU0Qw1myD1LQOCEbDxCay-MjZ77SeXN3dn4rRY&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=aky_ViX4zgM0bmTQhaeCtw&oh=00_AfKTPHZ3VObaRYVch-vs0Yj47nuUFf-wPFISDn9Irg01dQ&oe=683F95F6',
+            'years' => 20,
+            'dob' => '2005-05-18',
+            'phone' => '09050050005'
         ]
     ];
 
-    // Sort the contacts array alphabetically by name
-    usort($contacts, function($a, $b) {
-        return strcmp($a['name'], $b['name']);
-    });
+    // sort contacts by name alphabetically
+    usort($contactList, fn($x, $y) => strcmp($x['fullName'], $y['fullName']));
     ?>
 
     <table class="contactTable">
         <thead>
             <tr>
-                <th class="tableHeaderCell">No.</th>
+                <th class="tableHeaderCell">#</th>
                 <th class="tableHeaderCell">Name</th>
-                <th class="tableHeaderCell">Image</th>
-                <th class="tableHeaderCell">Age</th>
+                <th class="tableHeaderCell">Photo</th>
+                <th class="tableHeaderCell">Age</th>    
                 <th class="tableHeaderCell">Birthday</th>
-                <th class="tableHeaderCell">Contact Number</th>
+                <th class="tableHeaderCell">Phone</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $count = 1;
-            foreach ($contacts as $contact) {
+            // render table rows for each contact
+            $index = 1;
+            foreach ($contactList as $person) {
                 echo '<tr class="tableRow">';
-                echo '<td class="tableCell">' . $count . '</td>';
-                echo '<td class="tableCell">' . $contact['name'] . '</td>';
-                echo '<td class="tableCell imageCell"><img src="' . $contact['image'] . '" alt="' . $contact['name'] . '" class="personImage"></td>';
-                echo '<td class="tableCell">' . $contact['age'] . '</td>';
-                echo '<td class="tableCell">' . $contact['birthday'] . '</td>';
-                echo '<td class="tableCell">' . $contact['contactNumber'] . '</td>';
+                echo '<td class="tableCell">' . $index . '</td>';
+                echo '<td class="tableCell">' . $person['fullName'] . '</td>';
+                echo '<td class="tableCell imageCell"><img src="' . $person['photo'] . '" alt="' . $person['fullName'] . '" class="personImage"></td>';
+                echo '<td class="tableCell">' . $person['years'] . '</td>';
+                echo '<td class="tableCell">' . $person['dob'] . '</td>';
+                echo '<td class="tableCell">' . $person['phone'] . '</td>';
                 echo '</tr>';
-                $count++;
+                $index++;
             }
             ?>
         </tbody>

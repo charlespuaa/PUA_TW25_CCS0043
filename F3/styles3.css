@@ -1,0 +1,75 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #1f1f1f;
+    --muted: #888;
+    --card: #ffffff;
+    --hover: #eaeaea;
+    --border: #dcdcdc;
+    --highlight: #444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--highlight);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.calcTable {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--card);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calcTable th,
+.calcTable td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+    font-size: 1em;
+}
+
+.calcTable th {
+    background-color: var(--hover);
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.calcTable tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.calcTable tr:hover {
+    background-color: var(--hover);
+    transition: background-color 0.3s ease;
+}
+
+.calcTable .result {
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .calcTable {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+}

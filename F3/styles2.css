@@ -1,0 +1,88 @@
+
+
+:root {
+    --background: #f4f4f4;
+    --text: #1c1c1c;
+    --accent: #555;
+    --highlight: #eaeaea;
+    --hover: #dcdcdc;
+    --border: #ddd;
+    --result-color: #111;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+    font-size: 2.1em;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.calcTable {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calcTable th,
+.calcTable td {
+    padding: 16px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.calcTable th {
+    background-color: var(--highlight);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1em;
+    border-bottom: 1px solid var(--border);
+}
+
+.calcTable tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.calcTable tr:hover {
+    background-color: var(--hover);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.calcTable .result {
+    font-weight: bold;
+    color: var(--result-color);
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .calcTable {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calcTable th,
+    .calcTable td {
+        padding: 12px;
+        font-size: 0.85em;
+    }
+}

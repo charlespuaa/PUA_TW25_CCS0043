@@ -1,45 +1,65 @@
+/* minimalist monotone aesthetic */
+
+:root {
+    --primary: #1f1f1f;
+    --secondary: #f9f9f9;
+    --accent: #5c5c5c;
+    --hover: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f8fcff;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px 20px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-    color: #5DADE2;
-    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-weight: 600;
 }
 
 .contactTable {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow);
+    overflow: hidden;
 }
 
 .tableHeaderCell {
-    background-color: #A7D7EF;
-    color: black;
-    padding: 12px 15px;
+    background-color: #f0f0f0;
+    color: var(--accent);
+    padding: 14px 18px;
+    font-weight: 600;
     text-align: center;
-    border: 1px solid #ddd;
+    font-size: 0.95em;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .tableRow:nth-child(even) {
-    background-color: #F0F8FF;
+    background-color: #fafafa;
 }
 
 .tableRow:hover {
-    background-color: #D6EAF8;
+    background-color: var(--hover);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .tableCell {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    vertical-align: middle;
+    padding: 14px 18px;
     text-align: center;
+    font-size: 0.95em;
+    color: var(--primary);
+    border-bottom: 1px solid #eaeaea;
 }
 
 .imageCell {
@@ -47,43 +67,47 @@ h1 {
 }
 
 .personImage {
-    width: 120px; 
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #eee;
+    border: 2px solid #dcdcdc;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 480px) {
+.personImage:hover {
+    transform: scale(1.05);
+}
+
+/* responsive design */
+@media (max-width: 768px) {
     body {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    table {
-        width: 100%;
-        font-size: 0.75em;
+        margin: 20px 10px;
     }
 
-    .tableHeaderCell {
-        padding: 8px 5px; 
-        font-size: 0.85em; 
-    }
-
-    .tableCell {
-        padding: 8px 5px; 
+    .contactTable {
+        font-size: 0.9em;
     }
 
     h1 {
-        font-size: 1.8em; 
-        margin-bottom: 15px;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto 15px auto;
+        font-size: 1.8em;
+        margin-bottom: 25px;
     }
 
     .personImage {
-        width: 70px; 
-        height: 70px; 
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableHeaderCell, .tableCell {
+        padding: 10px 8px;
+        font-size: 0.85em;
+    }
+
+    .personImage {
+        width: 60px;
+        height: 60px;
     }
 }
