@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-image:
+        linear-gradient(rgba(246, 240, 240, 0.3), rgba(238, 228, 228, 0.3)),
+        url('https://a.ltrbxd.com/resized/sm/upload/lx/gf/04/q0/four%20sisters-1200-1200-675-675-crop-000000.jpg?v=fd549d92c6');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: rgb(134, 88, 28);
+    text-align: center;
+    font-size: 50px;
+    margin: 30px 0;
+}
+
+.story-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    overflow-x: auto;
+    height: 600px;
+    width: 100%;
+}
+
+.story-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.story-bg-teddy,
+.story-bg-bobbie,
+.story-bg-alex,
+.story-bg-gabbie,
+.story-bg-cj {
+    width: 350px;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.story-box h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.story-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.story-bg-teddy {
+    background-image: url('https://contents.pep.ph/images2/images2/2021/04/05/teddie-sorry-ma-1617625340.jpg');
+}
+
+.story-bg-bobbie {
+    background-image: url('https://images.summitmedia-digital.com/cosmo/images/2020/12/10/four-sisters-and-a-wedding-cast-3-1607580234.jpg');
+}
+
+.story-bg-alex {
+    background-image: url('https://preview.redd.it/vj4k3c0f1mg81.jpg?width=640&crop=smart&auto=webp&s=403a7df5393dd2ecb40288da2cafd5d6ae23ded1');
+}
+
+.story-bg-gabbie {
+    background-image: url('https://preview.redd.it/mjfpg7te1mg81.jpg?width=640&crop=smart&auto=webp&s=df45e5609d01d040f71dcc66a0bf404cb56a4e6a');
+}
+
+.story-bg-cj {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdhM2mnHJBckevFh1tzx1h2eWnCmtRTmQcgQ&s');
+}
