@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+    background-image: url('https://thumbs.dreamstime.com/b/mathematical-equations-geometric-shapes-image-over-black-background-mathematics-algebra-geometry-science-academic-concept-365918227.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #4fc3f7;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.volumeTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.volumeTable th,
+.volumeTable td {
+    border: 1px solid #2c3e50;
+    padding: 12px 15px;
+    text-align: center;
+    color: #e0f7fa;
+}
+
+.volumeTable th {
+    background-color: #263238;
+    color: #81d4fa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.volumeTable tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.volumeTable tr:hover {
+    background-color: #2a2a2a;
+    transition: background-color 0.3s ease;
+}
+
+.volumeTable .resultCell {
+    font-weight: bold;
+    text-align: center;
+    color: #4fc3f7;
+}

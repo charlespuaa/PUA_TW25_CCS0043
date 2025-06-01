@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    background-color: #1c1f26;
+    color: #eaeaea;
+    font-size: 16px;
+    background-image: url('https://png.pngtree.com/background/20230517/original/pngtree-tropical-fruits-at-the-beach-wallpapers-picture-image_2638315.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #fff89e;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 5em;
+}
+
+.fruit-table {
+    width: 95%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: rgba(0, 160, 190, 0.85); /* Tropical blue with opacity */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fruit-table th,
+.fruit-table td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 18px;
+    vertical-align: middle;
+    font-size: 1em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.fruit-table th {
+    background-color: rgba(0, 120, 150, 0.85); /* Darker tropical blue */
+    color: #fff89e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fruit-table tr.even-row {
+    background-color: rgba(0, 140, 170, 0.3); /* lighter alternate row */
+}
+
+.fruit-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: default;
+}
+
+.fruit-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #ffffff20;
+}
+
+.fruit-name {
+    font-weight: bold;
+    color: #d6ffe5;
+}
+
+.fruit-description {
+    font-style: italic;
+    color: #f0fdf4;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fruit-table {
+        width: 100%;
+    }
+
+    .fruit-table th,
+    .fruit-table td {
+        padding: 12px 14px;
+    }
+
+    .fruit-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .fruit-table th,
+    .fruit-table td {
+        padding: 10px 12px;
+    }
+
+    .fruit-pic {
+        width: 70px;
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}

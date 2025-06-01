@@ -1,39 +1,36 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 20px;
-    background-color: #1c1f26; /* deep dark blue-gray background */
-    color: #eaeaea; /* soft off-white text */
+    background-color: #1c1f26; 
+    color: #eaeaea; 
 }
 
 h1 {
     text-align: center;
-    color: #7dd3fc; /* soft neon blue */
+    color: #7dd3fc; 
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
-/* container wrapper */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/*table styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #2a2e39; /* slightly lighter than body for table bg */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* deeper shadow for dark mode */
+    background-color: #2a2e39; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* table headers */
 th {
     background-color: #3a3f50;
-    color: #80d8ff; /* light blue-cyan tone */
+    color: #80d8ff; 
     padding: 14px 16px;
     text-align: center;
     border-bottom: 2px solid #555;
@@ -42,29 +39,25 @@ th {
     letter-spacing: 0.5px;
 }
 
-/* even rows */
 tr:nth-child(even) {
-    background-color: #252933; /* slightly lighter row */
+    background-color: #252933; 
 }
 
-/* hover effect */
 tr:hover {
     background-color: #343a49;
     cursor: default;
     transition: background-color 0.3s ease;
 }
 
-/* table cells */
 td {
     padding: 12px 16px;
-    border: 1px solid #444; /* subtle dark borders */
+    border: 1px solid #444; 
     vertical-align: middle;
     text-align: center;
     color: #f0f0f0;
     font-size: 0.95em;
 }
 
-/* responsive mobile layout */
 @media (max-width: 480px) {
     table {
         font-size: 0.75em;

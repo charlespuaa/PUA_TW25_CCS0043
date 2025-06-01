@@ -1,0 +1,204 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.resume-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #555;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ccc;
+}
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #666;
+}
+.profile-details {
+    flex-grow: 1;
+}
+.profile-details h1 {
+    font-size: 26px;
+    margin: 0;
+}
+.profile-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* About Me / Career Objective */
+.about,
+.objective-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e6e6e6;
+    border-radius: 5px;
+}
+.about h2,
+.objective-section h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Section Wrapper */
+.content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Education */
+.education {
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.education h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.education-entry {
+    display: flex;
+    margin-bottom: 15px;
+}
+.edu-left {
+    width: 40%;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+    text-align: right;
+    padding-right: 20px;
+}
+.edu-right {
+    width: 60%;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Skills */
+.skills-section {
+    background-color: #d0f0fd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.skills-section h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.skills-list {
+    padding-left: 40px;
+    list-style-type: "→ ";
+}
+
+/* Affiliation */
+.affiliation-section {
+    background-color: #ffe9d6;
+    padding: 15px;
+    border-radius: 5px;
+}
+.affiliation-section h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    align-content: center;
+}
+
+/* Work Experience */
+.work-section {
+    background-color: #e9ffd6;
+    padding: 15px;
+    border-radius: 5px;
+}
+.work-section h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+.dark-mode {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+.dark-mode .resume-wrapper {
+    background-color: #2c2c2c;
+}
+.dark-mode .edu-left,
+.dark-mode .edu-right,
+.dark-mode .about,
+.dark-mode .objective-section,
+.dark-mode .education,
+.dark-mode .skills-section,
+.dark-mode .affiliation-section,
+.dark-mode .work-section {
+    background-color: #333;
+    color: #ffffff;
+}
+.dark-mode h2,
+.dark-mode h1,
+.dark-mode p,
+.dark-mode li {
+    color: #ffffff;
+}
+.dark-mode .profile-details p {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .edu-left,
+    .edu-right {
+        width: 100%;
+        text-align: left;
+        padding: 5px 0;
+    }
+    .education-entry {
+        flex-direction: column;
+    }
+}
