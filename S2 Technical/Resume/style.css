@@ -1,21 +1,28 @@
-/* Global Styles */
-html, body {
+/* ===== Reset and Base ===== */
+* {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background: #f7f7f7;
-    color: #333;
+    box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #121212; /* deeper black for full dark mode */
+    color: #e0e0e0;
+}
+
+/* ===== Wrapper ===== */
 .resume-wrapper {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* ===== Button ===== */
 button {
     display: block;
     margin: 10px auto;
@@ -25,20 +32,21 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 button:hover {
     background: #555;
 }
 
-/* Header Section */
+/* ===== Header Section ===== */
 .header {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-bottom: 20px;
-    border-bottom: 3px solid #ccc;
+    border-bottom: 3px solid #444;
 }
+
 .profile-pic img {
     width: 150px;
     height: 150px;
@@ -46,159 +54,94 @@ button:hover {
     object-fit: cover;
     border: 3px solid #666;
 }
+
 .profile-details {
     flex-grow: 1;
 }
+
 .profile-details h1 {
     font-size: 26px;
     margin: 0;
+    color: #ffffff;
 }
+
 .profile-details p {
     font-size: 14px;
     margin: 5px 0;
-    color: #555;
+    color: #bbbbbb;
 }
 
-/* About Me / Career Objective */
+/* ===== Sections ===== */
 .about,
-.objective-section {
+.objective-section,
+.education,
+.skills-section,
+.affiliation-section,
+.work-section {
     margin-top: 20px;
     padding: 20px;
-    background: #e6e6e6;
     border-radius: 5px;
+    background-color: #1f1f1f;
 }
+
+/* Section Headings */
 .about h2,
-.objective-section h2 {
-    margin: 0;
-    font-size: 22px;
-}
-
-/* Section Wrapper */
-.content {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Education */
-.education {
-    padding: 15px;
-    background: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-.education h2 {
+.objective-section h2,
+.education h2,
+.skills-section h2,
+.affiliation-section h2,
+.work-section h2 {
     font-size: 20px;
-    border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid #555;
     padding-bottom: 5px;
+    margin-bottom: 15px;
     text-align: center;
-    margin-bottom: 20px;
+    color: #fff;
 }
+
+/* ===== Education Layout ===== */
 .education-entry {
     display: flex;
     margin-bottom: 15px;
 }
+
 .edu-left {
     width: 40%;
     font-weight: bold;
-    color: #555;
+    color: #aaaaaa;
     font-size: 16px;
     text-align: right;
     padding-right: 20px;
 }
+
 .edu-right {
     width: 60%;
     font-size: 16px;
-    color: #333;
+    color: #dddddd;
 }
 
-/* Skills */
-.skills-section {
-    background-color: #d0f0fd;
-    padding: 15px;
-    border-radius: 5px;
-}
-.skills-section h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #aaa;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
+/* ===== Skills List ===== */
 .skills-list {
     padding-left: 40px;
     list-style-type: "→ ";
+    color: #cccccc;
 }
 
-/* Affiliation */
-.affiliation-section {
-    background-color: #ffe9d6;
-    padding: 15px;
-    border-radius: 5px;
-}
-.affiliation-section h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #aaa;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    align-content: center;
-}
-
-/* Work Experience */
-.work-section {
-    background-color: #e9ffd6;
-    padding: 15px;
-    border-radius: 5px;
-}
-.work-section h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #aaa;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-
-.dark-mode {
-    background: #1e1e1e;
-    color: #ffffff;
-}
-.dark-mode .resume-wrapper {
-    background-color: #2c2c2c;
-}
-.dark-mode .edu-left,
-.dark-mode .edu-right,
-.dark-mode .about,
-.dark-mode .objective-section,
-.dark-mode .education,
-.dark-mode .skills-section,
-.dark-mode .affiliation-section,
-.dark-mode .work-section {
-    background-color: #333;
-    color: #ffffff;
-}
-.dark-mode h2,
-.dark-mode h1,
-.dark-mode p,
-.dark-mode li {
-    color: #ffffff;
-}
-.dark-mode .profile-details p {
-    color: #ccc;
-}
-
-/* Responsive Design */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         text-align: center;
     }
+
+    .education-entry {
+        flex-direction: column;
+    }
+
     .edu-left,
     .edu-right {
         width: 100%;
         text-align: left;
         padding: 5px 0;
-    }
-    .education-entry {
-        flex-direction: column;
     }
 }

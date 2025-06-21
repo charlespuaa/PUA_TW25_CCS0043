@@ -9,7 +9,7 @@
 <body>
 
 <div class="resume-wrapper">
-    <button onclick="toggleTheme()">Toggle Theme</button>
+ 
 
     <?php include('personal_info.php'); ?>
     <?php include('career_objective.php'); ?>
@@ -20,9 +20,7 @@
 </div>
 
 <script>
-    function toggleTheme() {
-        document.body.classList.toggle("dark-mode");
-    }
+
 </script>
 </body>
 </html>
