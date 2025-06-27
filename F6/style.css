@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #e9d5c0, #dbc1ac, #bfa58a, #a3886c);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+form {
+    background: #fffaf5;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(96, 63, 32, 0.2);
+    width: 100%;
+    max-width: 450px;
+    border: 3px solid #d6c0a4;
+}
+
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+h2 {
+    text-align: center;
+    color: #5e3c1f;
+    margin-bottom: 25px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4a2e1f;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1.5px solid #c9b199;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #fffdf9;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #a2795b;
+    background-color: #fcf5ee;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: #a2795b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background: #7b5a40;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.success {
+    background: #e3f2d4;
+    color: #3e6027;
+    padding: 10px 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #bcd8a7;
+}
+
+.error {
+    background: #f8d4d4;
+    color: #7a2f2f;
+    padding: 10px 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #e7b4b4;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #8b6f58;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
